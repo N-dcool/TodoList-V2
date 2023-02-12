@@ -1,5 +1,5 @@
 {
-  "name": "todolist-v1",
+  "name": "todolist-v2",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -7,17 +7,25 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "node .",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-dcool/TodoList-V2.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N-dcool/TodoList-V2/issues"
+  },
+  "homepage": "https://github.com/N-dcool/TodoList-V2#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
-    "ejs": "^2.7.4",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "lodash": "^4.17.21",
-    "mongoose": "^6.7.2"
+    "mongoose": "^6.9.1"
   }
 }

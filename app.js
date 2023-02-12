@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 const {USERNAME, PASSWORD } = process.env;
-
+mongoose.set('strictQuery', true);
 mongoose.connect("mongodb+srv://"+ USERNAME +":"+ PASSWORD +"@wikiapi.iabnp7s.mongodb.net/?retryWrites=true&w=majority");
 
 const itemsSchema = {
