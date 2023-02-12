@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -11,7 +11,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-naresh:9mQAm1ma0VBgmT33@cluster0.nrpd5rt.mongodb.net/myFirstDatabase");
+const {USERNAME, PASSWORD } = process.env;
+
+mongoose.connect("mongodb+srv://"+ USERNAME +":"+ PASSWORD +"@wikiapi.iabnp7s.mongodb.net/?retryWrites=true&w=majority");
 
 const itemsSchema = {
   name: String
@@ -133,10 +135,8 @@ app.get("/about", function(req, res){
   res.render("about");
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
+let port = process.env.PORT || 3001;
+
 app.listen(port, function() {
-  console.log("Server started on port 3000");
+  console.log("Server started on port 3001");
 });
