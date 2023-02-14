@@ -1,7 +1,7 @@
 {
   "name": "todolist-v2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Todo list",
   "main": "app.js",
   "engines": {
     "node": "18.x"
@@ -10,11 +10,11 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Naresh Choudhary <nareshnc82643@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/N-dcool/TodoList-V2.git"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/N-dcool/TodoList-V2/issues"
