@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Todo list",
   "main": "app.js",
+  "homepage": "https://n-dcool.github.io/TodoList-V2",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,5 +30,8 @@
     "express": "^4.18.2",
     "lodash": "^4.17.21",
     "mongoose": "^6.9.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
