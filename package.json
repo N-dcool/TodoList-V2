@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "description": "Todo list",
   "main": "app.js",
-  "homepage": "https://n-dcool.github.io/TodoList-V2",
+  "homepage": "https://github.com/N-dcool/TodoList-V2#readme",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
-    "predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
-    "start": "node app.js",
+    "build": "netlify-lambda build express",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Naresh Choudhary <nareshnc82643@gmail.com>",
@@ -18,18 +17,24 @@
     "type": "git",
     "url": "git+https://github.com/N-dcool/TodoList-V2.git"
   },
+  "keywords": [
+    "netlify",
+    "express.js"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/N-dcool/TodoList-V2/issues"
   },
-  "homepage": "https://github.com/N-dcool/TodoList-V2#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "lodash": "^4.17.21",
-    "mongoose": "^6.9.1"
+    "mongoose": "^6.9.1",
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^2.0.21",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
